@@ -1,15 +1,123 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset=UFT-8">
-<meta name=viewport!
-content=width=device-width,
-initial-scale=1.0">
-<title>Trilha 60+</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trilha 60+</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos focados em acessibilidade (Letras grandes e alto contraste) */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f9f6;
+            color: #2c3e50;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 700px;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            color: #1b4332;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.3rem;
+            line-height: 1.6;
+            color: #495057;
+            margin-bottom: 30px;
+        }
+
+        /* Botão grande e fácil de clicar */
+        .btn-principal {
+            background-color: #2d6a4f;
+            color: white;
+            border: none;
+            padding: 18px 35px;
+            font-size: 1.4rem;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .btn-principal:hover {
+            background-color: #1b4332;
+            transform: scale(1.05);
+        }
+
+        /* Seção seguinte que começa oculta */
+        .oculto {
+            display: none;
+            margin-top: 30px;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .modulo-card {
+            background: #e9f5ed;
+            border-left: 6px solid #2d6a4f;
+            padding: 20px;
+            margin-top: 15px;
+            border-radius: 8px;
+            text-align: left;
+        }
+
+        .modulo-card h3 {
+            color: #1b4332;
+            font-size: 1.5rem;
+            margin-top: 0;
+        }
+    </style>
 </head>
-  
 <body>
-<h1>Trilha 60+</h1>
-  
-<p>Tecnologia em qualquer idade!</
- p>
+
+    <div class="container">
+        <h1>Trilha 60+</h1>
+        <p>Tecnologia em qualquer idade! Um espaço feito especialmente para ajudar você a navegar no mundo digital com facilidade, segurança e autonomia.</p>
+        
+        <!-- Botão interativo para iniciar -->
+        <button id="btn-comecar" class="btn-principal" onclick="mostrarProximaEtapa()">Começar a Trilha</button>
+
+        <!-- Próxima etapa que vai aparecer ao clicar -->
+        <div id="etapa-seguinte" class="oculto">
+            <h2>Escolha o que você quer aprender hoje:</h2>
+            
+            <div class="modulo-card">
+                <h3>📱 1. O Mundo do WhatsApp</h3>
+                <p>Aprenda a enviar mensagens, fazer chamadas de vídeo e conversar com a família com tranquilidade.</p>
+            </div>
+
+            <div class="modulo-card">
+                <h3>🔒 2. Segurança na Internet</h3>
+                <p>Dicas simples para reconhecer golpes, proteger suas senhas e navegar sem medo.</p>
+            </div>
+
+            <div class="modulo-card">
+                <h3>🗺️ 3. Mapas e Localização</h3>
+                <p>Como encontrar endereços e rotas no celular de forma prática.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
